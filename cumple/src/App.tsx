@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
+
 import './App.css'
 import Home from './pages/home.tsx'
 import Header from './components/header/Header'
@@ -9,6 +10,7 @@ import Oficina from './pages/dondeestoy/oficina.tsx'
 import Remoto from './pages/dondeestoy/remoto.tsx'
 import Cliente from './pages/dondeestoy/cliente.tsx'
 import FueraOficina from './pages/dondeestoy/fueraoficina.tsx'
+
 
 function App() {
 
@@ -30,6 +32,7 @@ function App() {
               <Route path="/mylocation/fueraoficina" element={<FueraOficina />} />
 
             </Routes>
+
           </div>
         </div>
       </div>

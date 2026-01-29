@@ -16,6 +16,7 @@
     "@mui/material": "^7.3.7",
     "@rneui/base": "^5.0.0",
     "@rneui/themed": "^5.0.0",
+    "axios": "^1.13.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-native-vector-icons": "^10.3.0",

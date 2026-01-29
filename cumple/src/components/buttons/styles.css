@@ -17,6 +17,7 @@
 .button:hover {
   background-position: right center;
   font-weight: 500;
+  
 }
 
 .button:active {

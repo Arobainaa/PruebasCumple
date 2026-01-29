@@ -21,6 +21,7 @@
   user-select: none;
   -webkit-user-select: none;
   width: auto;
+  
 }
 
 .button2:focus-visible {
