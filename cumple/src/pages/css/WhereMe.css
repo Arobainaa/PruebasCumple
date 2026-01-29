@@ -1,0 +1,18 @@
+.bg-me {
+  min-height: 100vh;
+  width: auto;
+  padding: 1.5em;
+  background-color: rgb(253, 243, 239);
+  position: relative;
+  overflow-x: hidden;
+
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 3.5rem;
+  justify-content: center;
+  column-gap: 7rem;
+
+}

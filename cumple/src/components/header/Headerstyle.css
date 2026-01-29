@@ -1,0 +1,17 @@
+.header-base {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 12px;  height: 2.6em;
+  width: 100%;
+  padding: 2.3rem;
+  margin-bottom: 5px;
+  background-color: rgb(253, 243, 239);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: inset;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
