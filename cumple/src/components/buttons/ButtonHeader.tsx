@@ -1,4 +1,4 @@
-import './prueba.css'
+import './css/headerbutton.css'
 
 import { Link } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ interface ButtonProps {
 
 export default function ButtonHeader({ to, children }: ButtonProps) {
   return (
-    <Link to={to} className="button2">
+    <Link to={to} className="button-header">
       <span>{children}</span>
     </Link>
   );

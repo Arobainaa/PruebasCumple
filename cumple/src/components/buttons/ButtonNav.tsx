@@ -1,4 +1,4 @@
-import './styles.css'
+import './css/navbarbuttons.css'
 
 import { Link } from 'react-router-dom'
 

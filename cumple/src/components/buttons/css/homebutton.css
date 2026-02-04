@@ -1,0 +1,58 @@
+.button-home {
+  align-items: center;
+  appearance: none;
+  background-image: linear-gradient(90deg,#a70000 0%,#db0606 100%);
+  border: 0;
+  display: inline-flex;
+  border-radius: 14px;
+  box-shadow:rgba(51, 2, 2, 0.4) 0 2px 4px,rgba(65, 3, 3, 0.3) 0 7px 13px -3px,rgba(167, 0, 0, 0.6) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  height: 48px;
+  justify-content: center;
+  padding: 0 20px;
+  width: 13rem;
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  overflow: hidden;
+  transition: background-position 0.5s, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-home span {
+  position: relative;
+  z-index: 2;
+}
+
+.button-home::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 160%;
+  background: linear-gradient(45deg,
+    transparent,
+    transparent 30%,
+    rgba(255, 255, 255, 0.65)
+  );
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.button-home:hover {
+  transform: translateY(-4px);
+  box-shadow:rgba(51, 2, 2, 0.4) 0 4px 6px,rgba(65, 3, 3, 0.3) 0 10px 16px -3px,rgba(167, 0, 0, 0.6) 0 -3px 0 inset;
+
+}
+
+.button-home:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.button-home:active {
+  transform: translateY(2px);
+  box-shadow: rgba(73, 0, 0, 0.8) 0 4px 7px inset;
+}

@@ -1,12 +1,12 @@
 #root {
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-family: Verdana, sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
   margin:0;
   padding:0;
   overflow-x: hidden;
-  background-color: rgb(253, 243, 239);
+  background-color: rgb(255, 255, 255);
 
 }
 
@@ -29,6 +29,22 @@
 }
 
 .pages-container {
-  flex: 1;              /* ocupa todo lo que queda */
-  overflow-y: auto;     /* scroll vertical aquí */
+  flex: 1;
+  overflow-y: auto;
 }
+
+.app-background {
+  background-image: url( './assets/svg/isotipo.svg' );
+  position: fixed;
+  inset: 0;
+
+  background-repeat: no-repeat;
+  background-position: right center;
+  margin-top: 20vh;
+  background-size: 100vh;
+
+  opacity: 0.97;
+  pointer-events: none;
+  z-index: 0;
+}
+

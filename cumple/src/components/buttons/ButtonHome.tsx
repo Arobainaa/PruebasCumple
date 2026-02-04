@@ -1,4 +1,4 @@
-import './homebutton.css'
+import './css/homebutton.css'
 
 import { Link } from 'react-router-dom'
 
@@ -7,9 +7,9 @@ interface ButtonProps {
   children: React.ReactNode;
 }
 
-export default function ButtonHeader({ to, children }: ButtonProps) {
+export default function ButtonHome({ to, children }: ButtonProps) {
   return (
-    <Link to={to} className="button2">
+    <Link to={to} className="button-home">
       <span>{children}</span>
     </Link>
   );

@@ -2,7 +2,7 @@
   min-height: 100vh;
   width: auto;
   padding: 1.5em;
-  background-color: rgb(253, 243, 239);
+  background-color:transparent;
   position: relative;
   overflow-x: hidden;
 }

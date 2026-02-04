@@ -1,20 +1,36 @@
-import ButtonHeader from '../buttons/ButtonNav';
-import './Nav.css'
+import { Link } from 'react-router-dom';
+import './Nav.css';
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 
-export default function NavBar() {
+type NavBarProps = {
+  open: boolean;
+  setOpen: (value: boolean) => void;
+};
 
+export default function NavBar({ open, setOpen }: NavBarProps) {
   return (
-    <nav className="nav-base">
-      
-      <div className="nav-left">
-        <ButtonHeader to="/home">Home</ButtonHeader>
-      </div>
+    <>
+      <input
+        type="checkbox"
+        id="side-menu-switch"
+        checked={open}
+        onChange={() => setOpen(!open)}
+        hidden
+      />
 
-      <div className="nav-right">
-        <ButtonHeader to="/mylocation">Dónde Estoy</ButtonHeader>
-        <ButtonHeader to="/theirlocation">Dónde Están</ButtonHeader>
-      </div>
+      <div className="side-menu">
+        <nav>
+          <Link to="/home" onClick={() => setOpen(false)}>Home</Link>
+          <Link to="/mylocation" onClick={() => setOpen(false)}>Dónde Estoy</Link>
+          <Link to="/theirlocation" onClick={() => setOpen(false)}>Dónde Están</Link>
+        </nav>
 
-    </nav>
+        <div className="hover-sidebar">
+          <label htmlFor="side-menu-switch">
+            {open ? <FaAngleLeft /> : <FaAngleRight />}
+          </label>
+        </div>
+      </div>
+    </>
   );
 }
