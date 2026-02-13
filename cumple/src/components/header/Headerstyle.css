@@ -1,19 +1,65 @@
 .header-base {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 12px;
-  height: 2rem;
+  /*box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 12px;*/
+  height: 5rem;
   width: 100%;
   padding: 2.3rem;
+  padding-bottom: 2.5rem;
   margin-bottom: 5px;
   background-image: transparent;
   box-sizing: border-box;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
   box-shadow: inset;
   position: sticky;
   top: 0;
   z-index: 1000;
+  /*border-bottom: 1px solid rgb(200, 2, 2);*/
+}
+.wave-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  pointer-events: none; 
 }
 
 
+.header-logo {
+  height: 2rem;
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+
+  transform: translateX(20px);
+  opacity: 0;
+
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  margin-bottom: 1.5px;
+}
+
+.header-buttons.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.header-buttons.hide {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  .header-buttons {
+    display: none;
+  }
+
+}

@@ -34,12 +34,12 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/mylocation" element={<WhereMe />} />
-            <Route path="/theirlocation" element={<WhereThey />} />
-            <Route path="/mylocation/oficina" element={<Oficina />} />
-            <Route path="/mylocation/remoto" element={<Remoto />} />
-            <Route path="/mylocation/cliente" element={<Cliente />} />
-            <Route path="/mylocation/fueraoficina" element={<FueraOficina />} />
+            <Route path="/home/mylocation" element={<WhereMe />} />
+            <Route path="/home/theirlocation" element={<WhereThey />} />
+            <Route path="/home/mylocation/oficina" element={<Oficina />} />
+            <Route path="/home/mylocation/remoto" element={<Remoto />} />
+            <Route path="/home/mylocation/cliente" element={<Cliente />} />
+            <Route path="/home/mylocation/fueraoficina" element={<FueraOficina />} />
           </Routes>
         </div>
       </div>

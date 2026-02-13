@@ -1,0 +1,134 @@
+.stacked-selector {
+  position: relative;
+  width: 500px;
+  font-family: 'Inter', sans-serif;
+}
+
+.cards-wrapper {
+  position: relative;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+}
+
+/* ---------- CARD BASE ---------- */
+.stacked-card {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  padding: 1rem;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.7s cubic-bezier(.4,0,.2,1),
+    opacity 0.4s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+
+  transform-style: preserve-3d;
+}
+
+/* ---------- LEFT / RIGHT BASE ---------- */
+.stacked-card.left {
+  transform: translateX(-70px) rotateY(-12deg) translateZ(0);
+  z-index: 1;
+  opacity: 0.75;
+}
+
+.stacked-card.right {
+  transform: translateX(70px) rotateY(12deg) translateZ(0);
+  z-index: 1;
+  opacity: 0.75;
+}
+
+/* ---------- ACTIVE STATES ---------- */
+.stacked-card.left.active {
+  transform: translateX(0) rotateY(0deg) translateZ(90px);
+  z-index: 3;
+  opacity: 1;
+  background: linear-gradient(135deg, #c50202, #a50000);
+  color: white;
+}
+
+.stacked-card.right.active {
+  transform: translateX(0) rotateY(0deg) translateZ(90px);
+  z-index: 3;
+  opacity: 1;
+  background: linear-gradient(135deg, #c50202, #a50000);
+  color: white;
+}
+
+/* ---------- INACTIVE WHEN OTHER ACTIVE ---------- */
+.stacked-card.left:not(.active) {
+  transform: translateX(-90px) rotateY(-18deg) translateZ(-40px);
+}
+
+.stacked-card.right:not(.active) {
+  transform: translateX(90px) rotateY(18deg) translateZ(-40px);
+}
+
+/* ---------- CONTENT ---------- */
+.card-home-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.card-home-image {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.card-home-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.card-home-description {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.disabled-button {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ---------- DOTS ---------- */
+.selector-buttons {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.selector-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #c50202;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.selector-dot.active {
+  background: #c50202;
+  transform: scale(1.2);
+}

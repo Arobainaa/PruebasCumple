@@ -1,0 +1,96 @@
+.flip-card {
+  width: 300px;
+  height: 360px;
+  perspective: 1000px;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(-180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.flip-card-front {
+  background-color: transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card-home-img {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-home-image {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.card-home-content {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.card-home-title {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.card-home-description {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: #555;
+}
+.card-home-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+
+.flip-card-back {
+  background: linear-gradient(135deg, #a70000, #db0606);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}

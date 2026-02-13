@@ -1,12 +1,12 @@
 #root {
-  font-family: Verdana, sans-serif;
+  font-family: 'Wix Madefor Text', sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
   margin:0;
   padding:0;
-  overflow-x: hidden;
-  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  background-color: #fffaf4;
 
 }
 
@@ -30,20 +30,21 @@
 
 .pages-container {
   flex: 1;
-  overflow-y: auto;
 }
 
 .app-background {
-  background-image: url( './assets/svg/isotipo.svg' );
+  background-image: url( './assets/svg/isotiponuevo.png' );
   position: fixed;
   inset: 0;
 
   background-repeat: no-repeat;
   background-position: right center;
   margin-top: 20vh;
-  background-size: 100vh;
+  margin-right: 8vh;
 
-  opacity: 0.97;
+  background-size: 90vh;
+
+  opacity: 0.20;
   pointer-events: none;
   z-index: 0;
 }
