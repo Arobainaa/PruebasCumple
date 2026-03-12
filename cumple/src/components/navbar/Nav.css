@@ -9,6 +9,7 @@
   position: absolute;
   transition: all 0.3s ease;
   z-index: 2001;
+  display:none;
 }
 
 #side-menu-switch:not(:checked) + .side-menu {

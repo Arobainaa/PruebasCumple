@@ -1,8 +1,80 @@
 .bg-they {
-  min-height: 100vh;
-  width: auto;
-  padding: 1.5em;
-  background-color:transparent;
-  position: relative;
+
+  flex: 1;
+  overflow-y: auto;
   overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 0;
+}
+
+/* contenedor del grid */
+.grid-they {
+
+  display: flex;
+  flex-direction: column;
+
+  width: 80vw;
+
+  padding: 1.5em;
+  padding-left: 3em;
+}
+
+/* fila superior */
+.grid-top {
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 90vw;
+
+  margin-bottom: 30px;
+}
+
+/* fila inferior */
+.grid-bottom {
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 90vw;
+
+  gap: 1rem;
+
+  margin-bottom: 30px;
+}
+
+.toggle-all-btn {
+
+  position: relative;
+
+  background: #9f0303;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 8px 16px;
+
+  cursor: pointer;
+
+  font-size: 0.9rem;
+
+  z-index: 3000;
+
+  transition: background 0.2s ease;
+}
+
+.toggle-all-btn:hover {
+  background: #c00404;
 }
