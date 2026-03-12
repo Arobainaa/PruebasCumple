@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Ana López",
+    "email": "ana.lopez@empresa.com",
+    "image": "/src/assets/img/users/ana.jpg",
+    "status": "Oficina"
+  },
+  {
+    "id": 2,
+    "name": "Carlos Martín",
+    "email": "carlos.martin@empresa.com",
+    "image": "/src/assets/img/users/carlos.jpg",
+    "status": "Remoto"
+  },
+  {
+    "id": 3,
+    "name": "Lucía Pérez",
+    "email": "lucia.perez@empresa.com",
+    "image": "/src/assets/img/users/lucia.jpg",
+    "status": "Cliente"
+  },
+  {
+    "id": 4,
+    "name": "David Gómez",
+    "email": "david.gomez@empresa.com",
+    "image": "/src/assets/img/users/david.jpg",
+    "status": "Fuera"
+  },
+  {
+    "id": 5,
+    "name": "Marta Ruiz",
+    "email": "marta.ruiz@empresa.com",
+    "image": "/src/assets/img/users/marta.jpg",
+    "status": "Oficina"
+  },
+  {
+    "id": 6,
+    "name": "Javier Torres",
+    "email": "javier.torres@empresa.com",
+    "image": "/src/assets/img/users/javier.jpg",
+    "status": "Remoto"
+  }
+]

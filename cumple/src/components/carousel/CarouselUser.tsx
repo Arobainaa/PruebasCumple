@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import UserCard from '../card/usercards/UserCard'
-import './style.css'
+import './Carousel.css'
 
 interface User {
   id: number

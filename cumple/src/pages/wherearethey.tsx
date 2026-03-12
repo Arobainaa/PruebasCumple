@@ -1,7 +1,7 @@
 import './css/They.css'
 import users from './users.json'
-import UserCarousel from '../components/carousel/UserCarousel'
-import CarouselSmall from '../components/carousel/CarouselSmall'
+import UserCarousel from '../components/carousel/CarouselUser'
+import CarouselSmall from '../components/carousel/CarouselOutside'
 
 function WhereThey() {
 

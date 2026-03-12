@@ -1,0 +1,113 @@
+.outside-carousel-container {
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.199);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    transition: 0.3s ease;
+    position: relative;
+    height: 100%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.outside-carousel-container:hover {
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.326);
+}
+
+.outside-carousel-container:hover h3 {
+    color: rgb(223, 4, 4);
+}
+
+.outside-carousel-container {
+    overflow: hidden;
+}
+
+.outside-carousel-container h3 {
+    transition: color 0.3s
+}
+
+.outside-carousel-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(200px circle at var(--x) var(--y), rgba(206, 1, 1, 0.137), transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.outside-carousel-container:hover::before {
+    opacity: 1;
+}
+
+.outside-carousel-track {
+    position: relative;
+    width: 80%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outside-carousel-button {
+    background: rgb(158, 0, 0);
+    color: #f9f0f0;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.25s ease;
+    box-shadow: 0 6px 18px rgba(158, 0, 0, 0.35);
+}
+
+.outside-carousel-button:hover {
+    background: rgb(125, 0, 0);
+    transform: scale(1.05);
+}
+
+/* Modal */
+.outside-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.outside-modal-content {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.outside-modal-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .outside-carousel-container {
+        width: 90vw;
+    }
+
+    .outside-modal-content {
+        padding: 1rem;
+    }
+}
