@@ -2,7 +2,7 @@ import './css/They.css'
 import users from './users.json'
 import UserCarousel from '../components/carousel/CarouselUser'
 import CarouselSmall from '../components/carousel/CarouselOutside'
-
+import ScrollList from '../components/external/components/ScrollList'
 function WhereThey() {
 
   const oficina = users.filter(u => u.status === "Oficina")
@@ -13,6 +13,7 @@ function WhereThey() {
   return (
     <div className='bg-they'>
       <div className='grid-they'>
+        <ScrollList></ScrollList>
 
         <div className='grid-top'>
           <UserCarousel title="En Oficina" users={oficina} />
